@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Form } from "./login_form";
+import loginImage from "../../public/images/undraw_secure_login.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,22 +22,25 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <nav className="flex items-center justify-between flex-wrap p-6">
+                <nav className="flex items-center justify-between flex-wrap p-6 mb-4">
                     <div className="flex items-center flex-shrink-0 text-white mr-6">
-                        <span className="font-semibold text-xl tracking-tight text-teal-500">
+                        <span className="font-semibold text-xl tracking-tight text-primary">
                             Portopro
                         </span>
                     </div>
                 </nav>
 
-                <div className="grid grid-cols-2 place-content-center">
-                    <div className="">
-                        <img
-                            src="/images/undraw_Login_re_4vu2.png"
-                            alt="Login Picture"
+                <div className="flex place-content-end space-x-4">
+                    <div className="w-0 sm:w-0 md:w-auto md:m-auto lg:w-auto lg:m-auto">
+                        <Image
+                            priority
+                            src={loginImage}
+                            alt="Follow us on Twitter"
+                            height={640}
+                            width={640}
                         />
                     </div>
-                    <div className="">
+                    <div className="basis-full sm:basis-full lg:basis-2/5 md:basis-full">
                         <Form />
                     </div>
                 </div>

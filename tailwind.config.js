@@ -14,6 +14,15 @@ module.exports = {
             width: {
                 128: "32rem",
             },
+            colors: {
+                primary: "#3459e6",
+                secondary: "#fff",
+                success: "#2fb380",
+                warning: "#f4bd61",
+                danger: "#da292e",
+                light: "#f8f9fa",
+                dark: "#212529",
+            },
         },
     },
     plugins: [require("@tailwindcss/forms")],
